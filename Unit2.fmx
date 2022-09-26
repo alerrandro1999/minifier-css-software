@@ -53,4 +53,14 @@ object Form2: TForm2
     Text = 'Copiar'
     OnClick = Button2Click
   end
+  object Button3: TButton
+    Position.X = 584.000000000000000000
+    Position.Y = 288.000000000000000000
+    Size.Width = 129.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Text = 'Baixar Arquivo'
+    OnClick = Button3Click
+  end
 end
