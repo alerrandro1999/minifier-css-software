@@ -13,8 +13,10 @@ type
     Memo2: TMemo;
     Button1: TButton;
     Button2: TButton;
+    Button3: TButton;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -44,6 +46,18 @@ end;
 procedure TForm2.Button2Click(Sender: TObject);
 begin
   Clipboard.AsText := Memo2.Lines.Text;
+end;
+
+procedure TForm2.Button3Click(Sender: TObject);
+var
+ Arquivo: TextFile;
+begin
+  AssignFile(Arquivo, 'C:\Users\alerr\Downloads\style.css');
+  Rewrite(Arquivo);
+  Writeln(Arquivo, Memo2.Lines.Text);
+  CloseFile(Arquivo);
+  ShowMessage('Arquivo salvo em C:\Users\alerr\Downloads\style.css');
+
 end;
 
 end.
