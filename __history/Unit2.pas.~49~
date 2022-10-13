@@ -5,7 +5,8 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Memo.Types,
-  FMX.StdCtrls, FMX.Controls.Presentation, FMX.ScrollBox, FMX.Memo, Vcl.Clipbrd;
+  FMX.StdCtrls, FMX.Controls.Presentation, FMX.ScrollBox, FMX.Memo, Vcl.Clipbrd,
+  FMX.Edit;
 
 type
   TForm2 = class(TForm)
@@ -14,6 +15,8 @@ type
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
+    Edit1: TEdit;
+    Label1: TLabel;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
@@ -52,10 +55,12 @@ procedure TForm2.Button3Click(Sender: TObject);
 var
  Arquivo: TextFile;
 begin
-  AssignFile(Arquivo, 'C:\style.css');
+
+  AssignFile(Arquivo, Edit1.Text + 'style.css');
   Rewrite(Arquivo);
   Writeln(Arquivo, Memo2.Lines.Text);
   CloseFile(Arquivo);
+  ShowMessage('Arquivo salvo em' + Edit1.Text);
 
 end;
 
