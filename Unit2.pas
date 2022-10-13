@@ -18,10 +18,12 @@ type
     Edit1: TEdit;
     Label1: TLabel;
     Button4: TButton;
+    Button5: TButton;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -69,6 +71,11 @@ end;
 procedure TForm2.Button4Click(Sender: TObject);
 begin
   Memo1.Lines.Clear;
+end;
+
+procedure TForm2.Button5Click(Sender: TObject);
+begin
+  Memo2.Lines.Clear;
 end;
 
 end.
