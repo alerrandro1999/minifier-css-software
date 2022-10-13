@@ -17,9 +17,11 @@ type
     Button3: TButton;
     Edit1: TEdit;
     Label1: TLabel;
+    Button4: TButton;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -62,6 +64,11 @@ begin
   CloseFile(Arquivo);
   ShowMessage('Arquivo salvo em' + Edit1.Text);
 
+end;
+
+procedure TForm2.Button4Click(Sender: TObject);
+begin
+  Memo1.Lines.Clear;
 end;
 
 end.
