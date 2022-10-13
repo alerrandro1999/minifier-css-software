@@ -54,7 +54,7 @@ object Form2: TForm2
     OnClick = Button2Click
   end
   object Button3: TButton
-    Position.X = 584.000000000000000000
+    Position.X = 600.000000000000000000
     Position.Y = 288.000000000000000000
     Size.Width = 129.000000000000000000
     Size.Height = 41.000000000000000000
@@ -91,5 +91,15 @@ object Form2: TForm2
     TabOrder = 9
     Text = 'Limpar'
     OnClick = Button4Click
+  end
+  object Button5: TButton
+    Position.X = 464.000000000000000000
+    Position.Y = 288.000000000000000000
+    Size.Width = 129.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 11
+    Text = 'Limpar'
+    OnClick = Button5Click
   end
 end
